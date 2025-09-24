@@ -428,7 +428,7 @@
           entries = data
             .map((item) => {
               const parsedYear = parseInt(item.year.slice(-4), 10);
-              const parsedLastReviewed = Date.parse(item.last_reviewed);
+              const parsedLastReviewed = Date.parse(item.year);
               return {
                 ...item,
                 yearValue: Number.isFinite(parsedYear) ? parsedYear : null,
