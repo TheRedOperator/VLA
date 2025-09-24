@@ -1,535 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vision-Language-Action Research</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      font-family: 'Fira Code', 'IBM Plex Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
-      --bg: #161b22;
-      --bg-alt: #0d1117;
-      --grid: rgba(255, 255, 255, 0.025);
-      --text: #eff6ff;
-      --muted: #7d8590;
-      --accent: #58a6ff;
-      --accent-soft: rgba(88, 166, 255, 0.18);
-      --surface: rgba(22, 27, 34, 0.92);
-      --surface-strong: rgba(28, 33, 40, 0.95);
-      --border: rgba(88, 166, 255, 0.28);
-      --border-soft: rgba(87, 96, 113, 0.28);
-      --chip-bg: rgba(88, 166, 255, 0.08);
-      --chip-border: rgba(88, 166, 255, 0.28);
-      --source-bg: rgba(16, 22, 30, 0.92);
-      --source-border: var(--border-soft);
-      --shadow: 0 26px 60px rgba(5, 11, 20, 0.6);
-    }
-
-    :root[data-theme="light"] {
-      color-scheme: light;
-      --bg: #f7f9fc;
-      --bg-alt: #f1f5fb;
-      --grid: rgba(11, 17, 26, 0.04);
-      --text: #12161f;
-      --muted: #5f6775;
-      --accent: #0969da;
-      --accent-soft: rgba(9, 105, 218, 0.15);
-      --surface: rgba(255, 255, 255, 0.92);
-      --surface-strong: rgba(255, 255, 255, 0.98);
-      --border: rgba(9, 105, 218, 0.24);
-      --border-soft: rgba(140, 160, 190, 0.28);
-      --chip-bg: rgba(9, 105, 218, 0.12);
-      --chip-border: rgba(9, 105, 218, 0.3);
-      --source-bg: rgba(255, 255, 255, 0.94);
-      --source-border: rgba(9, 105, 218, 0.2);
-      --shadow: 0 18px 40px rgba(15, 25, 40, 0.16);
-    }
-
-    body {
-      margin: 0;
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      /* background: radial-gradient(circle at 0% 0%, rgba(0, 255, 128, 0.12), transparent 55%),
-                  radial-gradient(circle at 100% 0%, rgba(0, 180, 255, 0.08), transparent 45%),
-                  linear-gradient(180deg, var(--bg), var(--bg-alt)); */
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: linear-gradient(var(--grid) 1px, transparent 1px),
-                        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-      background-size: 40px 40px;
-      opacity: 0.4;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    main {
-      width: min(1350px, 100%);
-      padding: clamp(32px, 6vw, 64px) clamp(20px, 6vw, 64px) 72px;
-      box-sizing: border-box;
-      position: relative;
-    }
-
-    header {
-      margin-bottom: 32px;
-      border-left: 3px solid var(--accent);
-      padding: 24px 160px 18px 18px;
-      position: relative;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(28px, 6vw, 44px);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-    }
-
-    h1::before {
-      content: '#';
-      color: var(--accent);
-      margin-right: 12px;
-    }
-
-    header p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 720px;
-      line-height: 1.5;
-      font-size: 14px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      padding: 8px 14px;
-      border-radius: 6px;
-      border: 1px solid var(--border-soft);
-      background: var(--surface-strong);
-      color: var(--text);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .theme-toggle:hover,
-    .theme-toggle:focus {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .controls {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
-
-    input[type="search"],
-    select {
-      flex: 1 1 320px;
-      min-width: 200px;
-      padding: 12px 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border-soft);
-      background: var(--surface-strong);
-      font-size: 15px;
-      color: inherit;
-      box-sizing: border-box;
-      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
-      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
-      appearance: none;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-    }
-
-    input[type="search"]::placeholder {
-      color: var(--muted);
-      opacity: 0.7;
-    }
-
-    .controls select {
-      flex: 0 0 160px;
-      min-width: 140px;
-      max-width: 200px;
-      padding-right: 42px;
-      background-repeat: no-repeat;
-      background-image: linear-gradient(45deg, transparent 50%, var(--accent) 50%),
-                        linear-gradient(135deg, var(--accent) 50%, transparent 50%);
-      background-position: calc(100% - 24px) 55%, calc(100% - 18px) 55%;
-      background-size: 8px 8px, 8px 8px;
-    }
-
-    input[type="search"]:focus,
-    select:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent), 0 0 0 6px rgba(0, 255, 128, 0.12);
-      transform: translateY(-1px);
-    }
-
-    .results-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 18px;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    #result-count {
-      color: var(--accent);
-    }
-
-    #results {
-      display: grid;
-      gap: 18px;
-    }
-
-    .entry {
-      background: var(--surface);
-      border: 1px solid var(--border-soft);
-      border-radius: 14px;
-      padding: clamp(18px, 4vw, 26px) clamp(18px, 5vw, 30px);
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 16px;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .entry:hover,
-    .entry:focus-within {
-      transform: translateY(-2px);
-      border-color: var(--accent);
-      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.55);
-    }
-
-    /* .entry::before {
-      content: '';
-      position: absolute;
-      top: 18px;
-      left: 18px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 14px 0 0 rgba(88, 166, 255, 0.45), 28px 0 0 rgba(88, 166, 255, 0.18);
-      opacity: 0.85;
-    } */
-
-    .entry-title {
-      font-size: 17px;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.35;
-    }
-
-    .entry-title a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px dashed transparent;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-
-    .entry-title a:hover,
-    .entry-title a:focus {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .entry-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .entry-summary {
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.55;
-      color: inherit;
-    }
-
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tag-pill {
-      font-size: 9px;
-      padding: 3px 8px;
-      border-radius: 8px;
-      background: var(--chip-bg);
-      border: 1px solid var(--chip-border);
-      color: var(--accent);
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .sources {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 11px;
-    }
-
-    .source-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 9px;
-      border-radius: 6px;
-      border: 1px solid var(--source-border);
-      color: inherit;
-      text-decoration: none;
-      background: var(--source-bg);
-      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-    }
-
-    .source-link:hover,
-    .source-link:focus {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 48px;
-      color: var(--muted);
-      border-radius: 12px;
-      border: 1px solid var(--border-soft);
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    @media (max-width: 720px) {
-      .entry {
-        padding: 18px;
-      }
-
-      .entry-title {
-        font-size: 18px;
-      }
-
-      header {
-        border-left-width: 2px;
-        padding: 18px 96px 14px 14px;
-      }
-
-      .controls {
-        gap: 10px;
-      }
-
-      .theme-toggle {
-        top: 14px;
-        right: 14px;
-        padding: 6px 10px;
-      }
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Responsive catalog of Vision-Language-Action research with powerful filtering." />
+    <title>Vision-Language-Action Research Catalog</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
   <body>
-  <main>
-    <header>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">ligh</button>
-      <h1>VLA Research</h1>
-      <p>Curated catalogue of physical and multimodal adversarial research.</p>
-    </header>
+    <button
+      id="theme-toggle"
+      class="theme-toggle"
+      type="button"
+      aria-label="Switch to light theme"
+      aria-pressed="false"
+    >
+      🌙
+    </button>
+    <main>
+      <header>
+        <div class="header-copy">
+          <h1>Vision-Language-Action Research</h1>
+          <p>Curated catalogue of physical and multimodal adversarial research from across the community.</p>
+        </div>
+      </header>
 
-    <section class="controls">
-      <input id="search" type="search" placeholder="Search title, summary, or tags" autocomplete="off" aria-label="Search entries" />
-      <select id="year-filter" aria-label="Filter by year">
-        <option value="all">All years</option>
-      </select>
-    </section>
+      <section class="controls" aria-label="Catalog filters">
+        <div class="control-group">
+          <label for="search">Search catalog</label>
+          <input id="search" type="search" placeholder="Search title, summary, or tags" autocomplete="off" />
+        </div>
+        <div class="control-group">
+          <label for="year-filter">Year</label>
+          <select id="year-filter">
+            <option value="all">All years</option>
+          </select>
+        </div>
+      </section>
 
-    <div class="results-meta">
-      <span id="result-count">Loading entries…</span>
-    </div>
+      <section class="results-meta" aria-live="polite">
+        <span id="result-count">Loading entries…</span>
+        <span id="filter-summary"></span>
+      </section>
 
-    <section id="results" aria-live="polite"></section>
-  </main>
+      <section id="results" role="list" aria-live="polite" aria-busy="false"></section>
+    </main>
 
-  <template id="entry-template">
-    <article class="entry">
-      <h2 class="entry-title"></h2>
-      <div class="entry-meta"></div>
-      <p class="entry-summary"></p>
-      <div class="tag-list"></div>
-      <div class="sources"></div>
-    </article>
-  </template>
+    <template id="entry-template">
+      <article class="entry">
+        <h2 class="entry-title"></h2>
+        <div class="entry-meta"></div>
+        <p class="entry-summary"></p>
+        <div class="tag-list"></div>
+        <div class="sources"></div>
+      </article>
+    </template>
 
-  <script>
-    let entries = [];
+    <noscript>
+      <div class="empty-state">This catalog requires JavaScript to display the latest research entries.</div>
+    </noscript>
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const searchInput = document.getElementById('search');
-      const yearSelect = document.getElementById('year-filter');
-      const themeToggle = document.getElementById('theme-toggle');
-
-      const THEME_KEY = 'vla-theme';
-
-      function applyTheme(mode) {
-        if (mode === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          themeToggle.textContent = 'dark';
-          themeToggle.setAttribute('aria-label', 'Switch to dark theme');
-        } else {
-          document.documentElement.removeAttribute('data-theme');
-          themeToggle.textContent = 'ligh';
-          themeToggle.setAttribute('aria-label', 'Switch to light theme');
-        }
-      }
-
-      let savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
-      applyTheme(savedTheme);
-
-      themeToggle.addEventListener('click', () => {
-        savedTheme = savedTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(savedTheme);
-        localStorage.setItem(THEME_KEY, savedTheme);
-      });
-
-      fetch('vla_research.json')
-        .then((res) => {
-          if (!res.ok) throw new Error('Unable to load vla_research.json');
-          return res.json();
-        })
-        .then((data) => {
-          entries = data
-            .map((item) => {
-              const parsedYear = parseInt(item.year.slice(-4), 10);
-              const parsedLastReviewed = Date.parse(item.year);
-              return {
-                ...item,
-                yearValue: Number.isFinite(parsedYear) ? parsedYear : null,
-                lastReviewedValue: Number.isFinite(parsedLastReviewed) ? parsedLastReviewed : 0,
-                searchIndex: `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase()
-              };
-            })
-            .sort((a, b) => b.lastReviewedValue - a.lastReviewedValue);
-          initYearFilter(entries, yearSelect);
-          render();
-        })
-        .catch((err) => {
-          document.getElementById('results').innerHTML = `<div class="empty-state">${err.message}</div>`;
-        });
-
-      searchInput.addEventListener('input', () => render());
-      yearSelect.addEventListener('change', () => render());
-
-      function initYearFilter(items, selectEl) {
-        const years = Array.from(
-          new Set(items.map((entry) => entry.yearValue).filter((value) => Number.isFinite(value)))
-        ).sort((a, b) => b - a);
-        years.forEach((year) => {
-          const option = document.createElement('option');
-          option.value = String(year);
-          option.textContent = year;
-          selectEl.append(option);
-        });
-      }
-
-      function render() {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        const selectedYear = yearSelect.value;
-
-        const filtered = entries.filter((entry) => {
-          const matchesSearch = !searchTerm || entry.searchIndex.includes(searchTerm);
-          const matchesYear = selectedYear === 'all' || entry.yearValue === parseInt(selectedYear, 10);
-          return matchesSearch && matchesYear;
-        });
-
-        updateResults(filtered);
-        updateMeta(filtered.length, entries.length);
-      }
-
-      function updateResults(items) {
-        const resultsContainer = document.getElementById('results');
-        resultsContainer.innerHTML = '';
-        if (!items.length) {
-          resultsContainer.innerHTML = '<div class="empty-state">No entries match the current filters.</div>';
-          return;
-        }
-        const template = document.getElementById('entry-template');
-        items.forEach((item) => {
-          const clone = template.content.cloneNode(true);
-          const titleEl = clone.querySelector('.entry-title');
-          const metaEl = clone.querySelector('.entry-meta');
-          const summaryEl = clone.querySelector('.entry-summary');
-          const tagsEl = clone.querySelector('.tag-list');
-          const sourcesEl = clone.querySelector('.sources');
-
-          const primarySource = item.sources.find((src) => src.type === 'paper') || item.sources[0];
-          if (primarySource) {
-            const link = document.createElement('a');
-            link.href = primarySource.url;
-            link.target = '_blank';
-            link.rel = 'noopener noreferrer';
-            link.textContent = item.title;
-            titleEl.append(link);
-          } else {
-            titleEl.textContent = item.title;
-          }
-
-          metaEl.innerHTML = `Published ${item.year} · Last reviewed ${item.last_reviewed}`;
-          summaryEl.textContent = item.summary;
-
-          item.tags.forEach((tag) => {
-            const span = document.createElement('span');
-            span.className = 'tag-pill';
-            span.textContent = tag;
-            tagsEl.append(span);
-          });
-
-          item.sources.forEach((source) => {
-            const a = document.createElement('a');
-            a.href = source.url;
-            a.className = 'source-link';
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer';
-            a.textContent = source.title;
-            sourcesEl.append(a);
-          });
-
-          resultsContainer.append(clone);
-        });
-      }
-
-      function updateMeta(filteredCount, totalCount) {
-        const countEl = document.getElementById('result-count');
-        countEl.textContent = `${filteredCount} of ${totalCount} entries`;
-      }
-    });
-  </script>
-</body>
+    <script src="assets/js/main.js" defer></script>
+  </body>
 </html>
