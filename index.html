@@ -425,11 +425,18 @@
           return res.json();
         })
         .then((data) => {
-          entries = data.map((item) => ({
-            ...item,
-            yearValue: parseInt(item.year.slice(-4), 10),
-            searchIndex: `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase()
-          }));
+          entries = data
+            .map((item) => {
+              const parsedYear = parseInt(item.year.slice(-4), 10);
+              const parsedLastReviewed = Date.parse(item.last_reviewed);
+              return {
+                ...item,
+                yearValue: Number.isFinite(parsedYear) ? parsedYear : null,
+                lastReviewedValue: Number.isFinite(parsedLastReviewed) ? parsedLastReviewed : 0,
+                searchIndex: `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase()
+              };
+            })
+            .sort((a, b) => b.lastReviewedValue - a.lastReviewedValue);
           initYearFilter(entries, yearSelect);
           render();
         })
@@ -441,7 +448,9 @@
       yearSelect.addEventListener('change', () => render());
 
       function initYearFilter(items, selectEl) {
-        const years = Array.from(new Set(items.map((entry) => entry.yearValue))).sort((a, b) => b - a);
+        const years = Array.from(
+          new Set(items.map((entry) => entry.yearValue).filter((value) => Number.isFinite(value)))
+        ).sort((a, b) => b - a);
         years.forEach((year) => {
           const option = document.createElement('option');
           option.value = String(year);
