@@ -722,5 +722,305 @@
       "Stealth Perturbation"
     ],
     "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 24,
+    "title": "Cybersecurity AI: Humanoid Robots as Attack Vectors",
+    "year": "17 Sep 2025",
+    "summary": "Security researchers document how the Unitree G1 humanoid can be compromised through a BLE provisioning command injection that yields root access, aided by shared AES keys across devices. They further expose weaknesses in the robot's FMX encryption and persistent telemetry exfiltration, demonstrating how an onboard cybersecurity AI can escalate from reconnaissance to active offensive operations against external targets.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Cybersecurity AI: Humanoid Robots as Attack Vectors",
+        "url": "https://arxiv.org/abs/2509.14139v3"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2509.14139v3"
+      }
+    ],
+    "tags": [
+      "Humanoid Robot Security",
+      "Cybersecurity AI",
+      "Robotic Control",
+      "Autonomous Systems"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 25,
+    "title": "The Cybersecurity of a Humanoid Robot",
+    "year": "16 Sep 2025",
+    "summary": "Provides a comprehensive penetration test of a production humanoid platform, cataloging firmware, wireless, and actuator vulnerabilities that enable persistent root access and remote control.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "The Cybersecurity of a Humanoid Robot",
+        "url": "https://arxiv.org/abs/2509.14096"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2509.14096"
+      }
+    ],
+    "tags": [
+      "Humanoid Robot Security",
+      "Vulnerability Assessment",
+      "BLE Exploitation",
+      "Remote Control"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 26,
+    "title": "CAI: An Open, Bug Bounty-Ready Cybersecurity AI",
+    "year": "08 Apr 2025",
+    "summary": "Introduces a modular cybersecurity AI agent designed to automate reconnaissance, exploitation, and reporting workflows for coordinated vulnerability disclosure programs.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "CAI: An Open, Bug Bounty-Ready Cybersecurity AI",
+        "url": "https://arxiv.org/abs/2504.06017"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2504.06017"
+      }
+    ],
+    "tags": [
+      "Cybersecurity AI",
+      "Bug Bounty",
+      "Autonomous Operations",
+      "Vulnerability Discovery"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 27,
+    "title": "Cybersecurity AI: The Dangerous Gap Between Automation and Autonomy",
+    "year": "30 Jun 2025",
+    "summary": "Analyzes how partially automated security tooling can overstep into unsupervised autonomy, outlining governance safeguards to prevent AI-driven operations from escalating beyond human intent.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Cybersecurity AI: The Dangerous Gap Between Automation and Autonomy",
+        "url": "https://arxiv.org/abs/2506.23592"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.23592"
+      }
+    ],
+    "tags": [
+      "Cybersecurity AI",
+      "Automation Risk",
+      "Governance",
+      "Operational Safety"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 28,
+    "title": "CAI Fluency: A Framework for Cybersecurity AI Fluency",
+    "year": "27 Aug 2025",
+    "summary": "Proposes a competency framework that measures practitioner fluency when collaborating with cybersecurity AI systems, mapping skill levels to operational tasks and training resources.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "CAI Fluency: A Framework for Cybersecurity AI Fluency",
+        "url": "https://arxiv.org/abs/2508.13588"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2508.13588"
+      }
+    ],
+    "tags": [
+      "Cybersecurity AI",
+      "Training Framework",
+      "Human Factors",
+      "Operational Readiness"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 29,
+    "title": "Robot Hacking Manual (RHM)",
+    "year": "09 Mar 2022",
+    "summary": "Compiles offensive security techniques for industrial and service robots, covering attack surfaces from network middleware to safety controllers with reproducible lab setups.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Robot Hacking Manual (RHM)",
+        "url": "https://arxiv.org/abs/2203.04765"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2203.04765"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Offensive Security",
+      "Industrial Control",
+      "Hands-On Labs"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 30,
+    "title": "Offensive Robot Cybersecurity",
+    "year": "23 Jun 2025",
+    "summary": "Details a red-teaming methodology for robotic platforms that couples adversarial simulation, exploit development, and mitigations tailored to autonomous systems.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Offensive Robot Cybersecurity",
+        "url": "https://arxiv.org/abs/2506.15343"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.15343"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Red Team",
+      "Penetration Testing",
+      "Autonomous Systems"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 31,
+    "title": "PentestGPT: An LLM-empowered Automatic Penetration Testing Tool",
+    "year": "13 Aug 2023",
+    "summary": "Presents an LLM-driven agent that plans and executes penetration testing steps, combining language-based reasoning with tool integrations for autonomous exploit discovery.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "PentestGPT: An LLM-empowered Automatic Penetration Testing Tool",
+        "url": "https://arxiv.org/abs/2308.06782"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2308.06782"
+      }
+    ],
+    "tags": [
+      "Penetration Testing",
+      "Large Language Models",
+      "Automation",
+      "Offensive Security"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 32,
+    "title": "Cybersecurity AI: Hacking the AI Hackers via Prompt Injection",
+    "year": "29 Aug 2025",
+    "summary": "Demonstrates how malicious prompts can subvert defensive cybersecurity agents, offering mitigations that harden instruction pipelines against jailbreaks and data exfiltration.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Cybersecurity AI: Hacking the AI Hackers via Prompt Injection",
+        "url": "https://arxiv.org/abs/2508.21669"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2508.21669"
+      }
+    ],
+    "tags": [
+      "Prompt Injection",
+      "Cybersecurity AI",
+      "Adversarial NLP",
+      "Defense Evasion"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 33,
+    "title": "SoK: Cybersecurity Assessment of Humanoid Ecosystem",
+    "year": "27 Aug 2025",
+    "summary": "Systematizes known vulnerabilities across humanoid robot hardware, software supply chains, and cloud services, prioritizing mitigations for safety-critical deployments.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "SoK: Cybersecurity Assessment of Humanoid Ecosystem",
+        "url": "https://arxiv.org/abs/2508.17481"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2508.17481"
+      }
+    ],
+    "tags": [
+      "Humanoid Robots",
+      "Security Assessment",
+      "Supply Chain",
+      "Risk Prioritization"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 34,
+    "title": "DevSecOps in Robotics",
+    "year": "23 Mar 2020",
+    "summary": "Advocates for integrating security practices into the robotics software lifecycle, outlining continuous integration, testing, and deployment controls tailored to ROS ecosystems.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "DevSecOps in Robotics",
+        "url": "https://arxiv.org/abs/2003.10402"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2003.10402"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "DevSecOps",
+      "Secure Development",
+      "Continuous Integration"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 35,
+    "title": "Alurity: A Systematic Review on the Security of Robotic and Autonomous Systems",
+    "year": "25 Mar 2022",
+    "summary": "Surveys research on cyber-physical threats to robots and autonomous platforms, synthesizing mitigation strategies across networking, perception, and control layers.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Alurity: A Systematic Review on the Security of Robotic and Autonomous Systems",
+        "url": "https://arxiv.org/abs/2203.13874"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2203.13874"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Systematic Review",
+      "Autonomous Systems",
+      "Vulnerability Analysis"
+    ],
+    "last_reviewed": "24 Sep 2025"
   }
 ]
