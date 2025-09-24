@@ -1,0 +1,726 @@
+[
+  {
+    "id": 1,
+    "title": "GhostImage: Remote Perception Attacks against Camera-based Image Classification Systems",
+    "year": "21 Jan 2020",
+    "summary": "In vision-based object classification systems imaging sensors perceive the environment and machine learning is then used to detect and classify objects for decision-making purposes; e.g., to maneuver an automated vehicle around an obstacle or to raise an alarm to indicate the presence of an intruder in surveillance settings. In this work we demonstrate how the perception domain can be remotely and unobtrusively exploited to enable an attacker to create spurious objects or alter an existing object.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "GhostImage: Remote Perception Attacks against Camera-based Image Classification Systems",
+        "url": "https://arxiv.org/abs/2001.07792v3"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2001.07792v3"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/Harry1993/GhostImage"
+      },
+      {
+        "type": "article",
+        "title": "Phantom of the ADAS",
+        "url": "https://www.nassiben.com/phantoms"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Projector Attack",
+      "Camera Sensor Spoofing",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 2,
+    "title": "Adversarial Imaging Pipelines",
+    "year": "07 Feb 2021",
+    "summary": "Adversarial attacks play an essential role in understanding deep neural network predictions and improving their robustness. Existing attack methods aim to deceive convolutional neural network (CNN)-based classifiers by manipulating RGB images that are fed directly to the classifiers.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Adversarial Imaging Pipelines",
+        "url": "https://arxiv.org/abs/2102.03728v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2102.03728v2"
+      },
+      {
+        "type": "website",
+        "title": "Adversarial Imaging Pipelines project page",
+        "url": "https://light.princeton.edu/publication/adversarial-pipelines/"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Camera ISP Manipulation",
+      "Adversarial Example Generation"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 3,
+    "title": "Adversarial Sticker: A Stealthy Attack Method in the Physical World",
+    "year": "14 Apr 2021",
+    "summary": "To assess the vulnerability of deep learning in the physical world, recent works introduce adversarial patches and apply them on different tasks. In this paper, we propose another kind of adversarial patch: the Meaningful Adversarial Sticker, a physically feasible and stealthy attack method by using real stickers existing in our life.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Adversarial Sticker: A Stealthy Attack Method in the Physical World",
+        "url": "https://arxiv.org/abs/2104.06728v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2104.06728v2"
+      },
+      {
+        "type": "journal",
+        "title": "IEICE Transactions publication",
+        "url": "https://ieice.org/en_transactions/information/10.1587/transinf.2022MUL0001/"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Adversarial Patch",
+      "Sticker Attack",
+      "Traffic Sign Spoofing"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 4,
+    "title": "DoubleStar: Long-Range Attack Towards Depth Estimation based Obstacle Avoidance in Autonomous Systems",
+    "year": "07 Oct 2021",
+    "summary": "Depth estimation-based obstacle avoidance has been widely adopted by autonomous systems (drones and vehicles) for safety purpose. It normally relies on a stereo camera to automatically detect obstacles and make flying/driving decisions, e.g., stopping several meters ahead of the obstacle in the path or moving away from the detected obstacle.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "DoubleStar: Long-Range Attack Towards Depth Estimation based Obstacle Avoidance in Autonomous Systems",
+        "url": "https://arxiv.org/abs/2110.03154v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2110.03154v1"
+      },
+      {
+        "type": "article",
+        "title": "Security Analysis of Camera-LiDAR Fusion",
+        "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/hallyburton"
+      },
+      {
+        "type": "website",
+        "title": "DoubleStar project site",
+        "url": "https://fakedepth.github.io/"
+      },
+      {
+        "type": "talk",
+        "title": "USENIX Security 2022 presentation",
+        "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/zhou-ce"
+      },
+      {
+        "type": "pdf",
+        "title": "USENIX Security 2022 paper",
+        "url": "https://www.usenix.org/system/files/sec22-zhou-ce.pdf"
+      },
+      {
+        "type": "article",
+        "title": "On the Realism of LiDAR Spoofing Attacks",
+        "url": "https://www.ndss-symposium.org/ndss-paper/on-the-realism-of-lidar-spoofing-attacks/"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Optical Injection",
+      "Depth Estimation",
+      "Drone Safety"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 5,
+    "title": "Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition",
+    "year": "06 Apr 2022",
+    "summary": "Traffic light recognition is essential for fully autonomous driving in urban areas. In this paper, we investigate the feasibility of fooling traffic light recognition mechanisms by shedding laser interference on the camera.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition",
+        "url": "https://arxiv.org/abs/2204.02675v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2204.02675v1"
+      },
+      {
+        "type": "slides",
+        "title": "Rolling Colors slides",
+        "url": "https://cyansec.com/files/slides/22SEC_RollingColors-slides.pdf"
+      },
+      {
+        "type": "paper",
+        "title": "Adversarial Laser Spot: Robust and Covert Physical-World Attack to DNNs",
+        "url": "https://proceedings.mlr.press/v189/hu23b.html"
+      },
+      {
+        "type": "pdf",
+        "title": "Adversarial Laser Spot PDF",
+        "url": "https://proceedings.mlr.press/v189/hu23b/hu23b.pdf"
+      },
+      {
+        "type": "pdf",
+        "title": "USENIX Security 2022 Summer paper",
+        "url": "https://www.usenix.org/system/files/sec22summer_yan.pdf"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Laser Injection",
+      "Traffic Light Spoofing",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 6,
+    "title": "Robust Contrastive Language-Image Pre-training against Data Poisoning and Backdoor Attacks",
+    "year": "13 Mar 2023",
+    "summary": "Contrastive vision-language representation learning has achieved state-of-the-art performance for zero-shot classification, by learning from millions of image-caption pairs crawled from the internet. However, the massive data that powers large multimodal models such as CLIP, makes them extremely vulnerable to various types of targeted data poisoning and backdoor attacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Robust Contrastive Language-Image Pre-training against Data Poisoning and Backdoor Attacks",
+        "url": "https://arxiv.org/abs/2303.06854v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2303.06854v2"
+      }
+    ],
+    "tags": [
+      "Defense",
+      "Data Poisoning Mitigation",
+      "Backdoor Defense",
+      "Vision-Language Models"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 7,
+    "title": "State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems",
+    "year": "22 Mar 2023",
+    "summary": "Adversarial attacks can mislead deep learning models to make false predictions by implanting small perturbations to the original input that are imperceptible to the human eye, which poses a huge security threat to the computer vision systems based on deep learning. Physical adversarial attacks, which is more realistic, as the perturbation is introduced to the input before it is being captured and converted to a binary image inside the vision system, when compared to digital adversarial attacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems",
+        "url": "https://arxiv.org/abs/2303.12249v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2303.12249v1"
+      },
+      {
+        "type": "code",
+        "title": "RFLA reflected light attack code",
+        "url": "https://github.com/winterwindwang/RFLA"
+      }
+    ],
+    "tags": [
+      "Survey",
+      "Physical Adversarial",
+      "Optical Attack",
+      "Threat Modeling"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 8,
+    "title": "Imperceptible CMOS camera dazzle for adversarial attacks on deep neural networks",
+    "year": "22 Oct 2023",
+    "summary": "Despite the outstanding performance of deep neural networks, they are vulnerable to adversarial attacks. While there are many invisible attacks in the digital domain, most physical world adversarial attacks are visible.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Imperceptible CMOS camera dazzle for adversarial attacks on deep neural networks",
+        "url": "https://arxiv.org/abs/2311.16118v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2311.16118v1"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Optical Dazzle",
+      "Sensor Jamming",
+      "Rolling Shutter Exploit"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 9,
+    "title": "Shadowcast: Stealthy Data Poisoning Attacks Against Vision-Language Models",
+    "year": "05 Feb 2024",
+    "summary": "Vision-Language Models (VLMs) excel in generating textual responses from visual inputs, but their versatility raises security concerns. This study takes the first step in exposing VLMs' susceptibility to data poisoning attacks that can manipulate responses to innocuous, everyday prompts.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Shadowcast: Stealthy Data Poisoning Attacks Against Vision-Language Models",
+        "url": "https://arxiv.org/abs/2402.06659v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2402.06659v2"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/umd-huang-lab/VLM-Poisoning"
+      },
+      {
+        "type": "code",
+        "title": "ShadowAttack code",
+        "url": "https://github.com/hncszya/ShadowAttack"
+      }
+    ],
+    "tags": [
+      "Data Poisoning",
+      "Vision-Language Models",
+      "Misinformation",
+      "Stealth Attack"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 10,
+    "title": "On the Vulnerability of LLM/VLM-Controlled Robotics",
+    "year": "15 Feb 2024",
+    "summary": "In this work, we highlight vulnerabilities in robotic systems integrating large language models (LLMs) and vision-language models (VLMs) due to input modality sensitivities. While LLM/VLM-controlled robots show impressive performance across various tasks, their reliability under slight input variations remains underexplored yet critical.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "On the Vulnerability of LLM/VLM-Controlled Robotics",
+        "url": "https://arxiv.org/abs/2402.10340v5"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2402.10340v5"
+      }
+    ],
+    "tags": [
+      "Robotics",
+      "Input Perturbation",
+      "Vision-Language Models",
+      "Reliability"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 11,
+    "title": "Physical Backdoor: Towards Temperature-based Backdoor Attacks in the Physical World",
+    "year": "30 Apr 2024",
+    "summary": "Backdoor attacks have been well-studied in visible light object detection (VLOD) in recent years. However, VLOD can not effectively work in dark and temperature-sensitive scenarios.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Physical Backdoor: Towards Temperature-based Backdoor Attacks in the Physical World",
+        "url": "https://arxiv.org/abs/2404.19417v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2404.19417v1"
+      }
+    ],
+    "tags": [
+      "Physical Backdoor",
+      "Thermal Imaging",
+      "Temperature Trigger",
+      "Object Detection"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 12,
+    "title": "Adversarial Robustness for Visual Grounding of Multimodal Large Language Models",
+    "year": "16 May 2024",
+    "summary": "Multi-modal Large Language Models (MLLMs) have recently achieved enhanced performance across various vision-language tasks including visual grounding capabilities. However, the adversarial robustness of visual grounding remains unexplored in MLLMs.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Adversarial Robustness for Visual Grounding of Multimodal Large Language Models",
+        "url": "https://arxiv.org/abs/2405.09981v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2405.09981v1"
+      },
+      {
+        "type": "openreview",
+        "title": "OpenReview discussion",
+        "url": "https://openreview.net/forum?id=Fz0uYu6bZn"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Visual Grounding",
+      "Adversarial Perturbation",
+      "Multimodal Attacks"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 13,
+    "title": "Safeguarding Vision-Language Models Against Patched Visual Prompt Injectors",
+    "year": "17 May 2024",
+    "summary": "Large language models have become increasingly prominent, also signaling a shift towards multimodality as the next frontier in artificial intelligence, where their embeddings are harnessed as prompts to generate textual content. Vision-language models (VLMs) stand at the forefront of this advancement, offering innovative ways to combine visual and textual data for enhanced understanding and interaction.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Safeguarding Vision-Language Models Against Patched Visual Prompt Injectors",
+        "url": "https://arxiv.org/abs/2405.10529v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2405.10529v2"
+      },
+      {
+        "type": "openreview",
+        "title": "OpenReview discussion",
+        "url": "https://openreview.net/forum?id=2r8n6kKNEXNa"
+      }
+    ],
+    "tags": [
+      "Defense",
+      "Adversarial Patch Mitigation",
+      "Prompt Injection Defense",
+      "Vision-Language Models"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 14,
+    "title": "Invisible Optical Adversarial Stripes on Traffic Sign against Autonomous Vehicles",
+    "year": "10 Jul 2024",
+    "summary": "Camera-based computer vision is essential to autonomous vehicle's perception. This paper presents an attack that uses light-emitting diodes and exploits the camera's rolling shutter effect to create adversarial stripes in the captured images to mislead traffic sign recognition.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Invisible Optical Adversarial Stripes on Traffic Sign against Autonomous Vehicles",
+        "url": "https://arxiv.org/abs/2407.07510v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2407.07510v1"
+      },
+      {
+        "type": "pdf",
+        "title": "GhostStripe MobiSys PDF",
+        "url": "https://tanrui.github.io/pub/GhostStripe-MobiSys.pdf"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Optical Injection",
+      "Traffic Sign Spoofing",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 15,
+    "title": "Prompt Injection Attacks on Large Language Models in Oncology",
+    "year": "23 Jul 2024",
+    "summary": "Vision-language artificial intelligence models (VLMs) possess medical knowledge and can be employed in healthcare in numerous ways, including as image interpreters, virtual scribes, and general decision support systems. However, here, we demonstrate that current VLMs applied to medical tasks exhibit a fundamental security flaw: they can be attacked by prompt injection attacks, which can be used to output harmful information just by interacting with the VLM, without any access to its parameters.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Prompt Injection Attacks on Large Language Models in Oncology",
+        "url": "https://arxiv.org/abs/2407.18981v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2407.18981v1"
+      },
+      {
+        "type": "journal",
+        "title": "Nature Communications article",
+        "url": "https://www.nature.com/articles/s41467-024-55631-x"
+      }
+    ],
+    "tags": [
+      "Prompt Injection",
+      "Healthcare AI",
+      "Vision-Language Models",
+      "Safety Risk"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 16,
+    "title": "Empirical Analysis of Large Vision-Language Models against Goal Hijacking via Visual Prompt Injection",
+    "year": "07 Aug 2024",
+    "summary": "We explore visual prompt injection (VPI) that maliciously exploits the ability of large vision-language models (LVLMs) to follow instructions drawn onto the input image. We propose a new VPI method, \"goal hijacking via visual prompt injection\" (GHVPI), that swaps the execution task of LVLMs from an original task to an alternative task designated by an attacker.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Empirical Analysis of Large Vision-Language Models against Goal Hijacking via Visual Prompt Injection",
+        "url": "https://arxiv.org/abs/2408.03554v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2408.03554v1"
+      },
+      {
+        "type": "blog",
+        "title": "GPT-4 vision prompt injection overview",
+        "url": "https://blog.roboflow.com/gpt-4-vision-prompt-injection/"
+      },
+      {
+        "type": "blog",
+        "title": "Lakera guide to visual prompt injections",
+        "url": "https://www.lakera.ai/blog/visual-prompt-injections"
+      }
+    ],
+    "tags": [
+      "Visual Prompt Injection",
+      "Goal Hijacking",
+      "Vision-Language Models",
+      "Instruction Following Exploit"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 17,
+    "title": "TrojVLM: Backdoor Attack Against Vision Language Models",
+    "year": "28 Sep 2024",
+    "summary": "The emergence of Vision Language Models (VLMs) is a significant advancement in integrating computer vision with Large Language Models (LLMs) to produce detailed text descriptions based on visual inputs, yet it introduces new security vulnerabilities. Unlike prior work that centered on single modalities or classification tasks, this study introduces TrojVLM, the first exploration of backdoor attacks aimed at VLMs engaged in complex image-to-text generation.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "TrojVLM: Backdoor Attack Against Vision Language Models",
+        "url": "https://arxiv.org/abs/2409.19232v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2409.19232v1"
+      }
+    ],
+    "tags": [
+      "Backdoor Attack",
+      "Vision-Language Models",
+      "Image Captioning",
+      "Trigger Phrases"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 18,
+    "title": "Attacking Vision-Language Computer Agents via Pop-ups",
+    "year": "04 Nov 2024",
+    "summary": "Autonomous agents powered by large vision and language models (VLM) have demonstrated significant potential in completing daily computer tasks, such as browsing the web to book travel and operating desktop software, which requires agents to understand these interfaces. Despite such visual inputs becoming more integrated into agentic applications, what types of risks and attacks exist around them still remain unclear.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Attacking Vision-Language Computer Agents via Pop-ups",
+        "url": "https://arxiv.org/abs/2411.02391v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.02391v2"
+      },
+      {
+        "type": "code",
+        "title": "PopupAttack code",
+        "url": "https://github.com/SALT-NLP/PopupAttack"
+      }
+    ],
+    "tags": [
+      "UI Manipulation",
+      "Vision-Language Agents",
+      "Adversarial Pop-ups",
+      "Task Hijacking"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 19,
+    "title": "TrojanRobot: Physical-world Backdoor Attacks Against VLM-based Robotic Manipulation",
+    "year": "18 Nov 2024",
+    "summary": "Robotic manipulation in the physical world is increasingly empowered by large language models (LLMs) and vision-language models (VLMs), leveraging their understanding and perception capabilities. Recently, various attacks against such robotic policies have been proposed, with backdoor attacks drawing considerable attention for their high stealth and strong persistence capabilities.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "TrojanRobot: Physical-world Backdoor Attacks Against VLM-based Robotic Manipulation",
+        "url": "https://arxiv.org/abs/2411.11683v5"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.11683v5"
+      },
+      {
+        "type": "website",
+        "title": "Reference",
+        "url": "https://trojanrobot.github.io"
+      }
+    ],
+    "tags": [
+      "Physical Backdoor",
+      "Robotic Manipulation",
+      "Vision-Language Models",
+      "Module Poisoning"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 20,
+    "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics",
+    "year": "18 Nov 2024",
+    "summary": "Recently in robotics, Vision-Language-Action (VLA) models have emerged as a transformative approach, enabling robots to execute complex tasks by integrating visual and linguistic inputs within an end-to-end learning framework. Despite their significant capabilities, VLA models introduce new attack surfaces.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics",
+        "url": "https://arxiv.org/abs/2411.13587v4"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.13587v4"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/William-wAng618/roboticAttack"
+      },
+      {
+        "type": "website",
+        "title": "Reference",
+        "url": "https://vlaattacker.github.io/"
+      }
+    ],
+    "tags": [
+      "Vision-Language-Action",
+      "Adversarial Patch",
+      "Robotic Control",
+      "Trajectory Manipulation"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 21,
+    "title": "Adversarial Attacks on Robotic Vision Language Action Models",
+    "year": "03 Jun 2025",
+    "summary": "The emergence of vision-language-action models (VLAs) for end-to-end control is reshaping the field of robotics by enabling the fusion of multimodal sensory inputs at the billion-parameter scale. The capabilities of VLAs stem primarily from their architectures, which are often based on frontier large language models (LLMs).",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Adversarial Attacks on Robotic Vision Language Action Models",
+        "url": "https://arxiv.org/abs/2506.03350v1"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.03350v1"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/eliotjones1/robogcg"
+      }
+    ],
+    "tags": [
+      "Vision-Language-Action",
+      "Jailbreaking",
+      "Robotic Control Takeover",
+      "Prompt-Based Attack"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 22,
+    "title": "Jailbreaking LLM-Controlled Robots",
+    "year": "17 Oct 2024",
+    "summary": "The recent introduction of large language models (LLMs) has revolutionized the field of robotics by enabling contextual reasoning and intuitive human-robot interaction in domains as varied as manipulation, locomotion, and self-driving vehicles. When viewed as a stand-alone technology, LLMs are known to be vulnerable to jailbreaking attacks, wherein malicious prompters elicit harmful text by bypassing LLM safety guardrails.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Jailbreaking LLM-Controlled Robots",
+        "url": "https://arxiv.org/abs/2410.13691v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2410.13691v2"
+      },
+      {
+        "type": "website",
+        "title": "Reference",
+        "url": "https://robopair.org"
+      },
+      {
+        "type": "article",
+        "title": "Wired coverage of robo jailbreaks",
+        "url": "https://www.wired.com/story/researchers-llm-ai-robot-violence"
+      }
+    ],
+    "tags": [
+      "Jailbreaking",
+      "Robotics",
+      "Safety Vulnerability",
+      "Prompt-Based Attack"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 23,
+    "title": "CAPAA: Classifier-Agnostic Projector-Based Adversarial Attack",
+    "year": "01 Jun 2025",
+    "summary": "Projector-based adversarial attack aims to project carefully designed light patterns (i.e., adversarial projections) onto scenes to deceive deep image classifiers. It has potential applications in privacy protection and the development of more robust classifiers.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "CAPAA: Classifier-Agnostic Projector-Based Adversarial Attack",
+        "url": "https://arxiv.org/abs/2506.00978v2"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.00978v2"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/ZhanLiQxQ/CAPAA"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Projector Attack",
+      "Multi-Classifier",
+      "Stealth Perturbation"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  }
+]
