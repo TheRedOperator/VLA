@@ -81,7 +81,7 @@
     header {
       margin-bottom: 32px;
       border-left: 3px solid var(--accent);
-      padding: 24px 160px 18px 18px;
+      padding: 24px clamp(120px, 12vw, 160px) 18px 18px;
       position: relative;
     }
 
@@ -115,7 +115,7 @@
       right: 18px;
       padding: 8px 14px;
       border-radius: 6px;
-      border: 1px solid var(--border-soft);
+      border: 0.75px solid var(--border-soft);
       background: var(--surface-strong);
       color: var(--text);
       font-size: 11px;
@@ -138,6 +138,7 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-bottom: 18px;
+      align-items: stretch;
     }
 
     input[type="search"],
@@ -341,17 +342,32 @@
 
       header {
         border-left-width: 2px;
-        padding: 18px 96px 14px 14px;
+        padding: 18px clamp(96px, 22vw, 128px) 14px 14px;
       }
 
       .controls {
         gap: 10px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .controls input[type="search"] {
+        width: 100%;
+        flex: none;
+      }
+
+      .controls select {
+        align-self: flex-end;
+        min-width: 0;
+        width: auto;
       }
 
       .theme-toggle {
         top: 14px;
         right: 14px;
-        padding: 6px 10px;
+        padding: 5px 9px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
       }
     }
   </style>
@@ -359,7 +375,7 @@
   <body>
   <main>
     <header>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">ligh</button>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light theme">light</button>
       <h1>VLA Research</h1>
       <p>Curated catalogue of physical and multimodal adversarial research.</p>
     </header>
@@ -389,98 +405,146 @@
   </template>
 
   <script>
-    let entries = [];
-
     document.addEventListener('DOMContentLoaded', () => {
       const searchInput = document.getElementById('search');
       const yearSelect = document.getElementById('year-filter');
       const themeToggle = document.getElementById('theme-toggle');
+      const resultsContainer = document.getElementById('results');
+      const countEl = document.getElementById('result-count');
 
-      const THEME_KEY = 'vla-theme';
+      const state = {
+        entries: [],
+        filters: {
+          query: '',
+          year: 'all'
+        }
+      };
 
-      function applyTheme(mode) {
-        if (mode === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-          themeToggle.textContent = 'dark';
-          themeToggle.setAttribute('aria-label', 'Switch to dark theme');
-        } else {
-          document.documentElement.removeAttribute('data-theme');
-          themeToggle.textContent = 'ligh';
-          themeToggle.setAttribute('aria-label', 'Switch to light theme');
+      initTheme();
+      loadEntries();
+      wireUpFilters();
+
+      function initTheme() {
+        const THEME_KEY = 'vla-theme';
+        let savedTheme = 'dark';
+
+        try {
+          const storedTheme = localStorage.getItem(THEME_KEY);
+          if (storedTheme === 'light' || storedTheme === 'dark') {
+            savedTheme = storedTheme;
+          }
+        } catch (error) {
+          // Access to localStorage can fail in private browsing modes; ignore and fallback to default.
+        }
+
+        applyTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+          savedTheme = savedTheme === 'dark' ? 'light' : 'dark';
+          applyTheme(savedTheme);
+          try {
+            localStorage.setItem(THEME_KEY, savedTheme);
+          } catch (error) {
+            // Ignore persistence errors to avoid breaking the toggle interaction.
+          }
+        });
+
+        function applyTheme(mode) {
+          if (mode === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            themeToggle.textContent = 'dark';
+            themeToggle.setAttribute('aria-label', 'Switch to dark theme');
+          } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeToggle.textContent = 'light';
+            themeToggle.setAttribute('aria-label', 'Switch to light theme');
+          }
         }
       }
 
-      let savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
-      applyTheme(savedTheme);
+      async function loadEntries() {
+        try {
+          const response = await fetch('vla_research.json');
+          if (!response.ok) throw new Error('Unable to load vla_research.json');
+          const data = await response.json();
+          state.entries = normalizeEntries(data);
+          initYearFilter(state.entries, yearSelect);
+          applyFilters();
+        } catch (error) {
+          renderError(error.message);
+        }
+      }
 
-      themeToggle.addEventListener('click', () => {
-        savedTheme = savedTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(savedTheme);
-        localStorage.setItem(THEME_KEY, savedTheme);
-      });
-
-      fetch('vla_research.json')
-        .then((res) => {
-          if (!res.ok) throw new Error('Unable to load vla_research.json');
-          return res.json();
-        })
-        .then((data) => {
-          entries = data
-            .map((item) => {
-              const parsedYear = parseInt(item.year.slice(-4), 10);
-              const parsedLastReviewed = Date.parse(item.year);
-              return {
-                ...item,
-                yearValue: Number.isFinite(parsedYear) ? parsedYear : null,
-                lastReviewedValue: Number.isFinite(parsedLastReviewed) ? parsedLastReviewed : 0,
-                searchIndex: `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase()
-              };
-            })
-            .sort((a, b) => b.lastReviewedValue - a.lastReviewedValue);
-          initYearFilter(entries, yearSelect);
-          render();
-        })
-        .catch((err) => {
-          document.getElementById('results').innerHTML = `<div class="empty-state">${err.message}</div>`;
-        });
-
-      searchInput.addEventListener('input', () => render());
-      yearSelect.addEventListener('change', () => render());
+      function normalizeEntries(data) {
+        return data
+          .map((item) => {
+            const parsedYear = parseInt(item.year.slice(-4), 10);
+            const parsedLastReviewed = Date.parse(item.year);
+            return {
+              ...item,
+              yearValue: Number.isFinite(parsedYear) ? parsedYear : null,
+              lastReviewedValue: Number.isFinite(parsedLastReviewed) ? parsedLastReviewed : 0,
+              searchIndex: `${item.title} ${item.summary} ${item.tags.join(' ')}`.toLowerCase()
+            };
+          })
+          .sort((a, b) => b.lastReviewedValue - a.lastReviewedValue);
+      }
 
       function initYearFilter(items, selectEl) {
+        const fragment = document.createDocumentFragment();
         const years = Array.from(
           new Set(items.map((entry) => entry.yearValue).filter((value) => Number.isFinite(value)))
         ).sort((a, b) => b - a);
+
         years.forEach((year) => {
           const option = document.createElement('option');
           option.value = String(year);
           option.textContent = year;
-          selectEl.append(option);
+          fragment.append(option);
+        });
+
+        selectEl.append(fragment);
+      }
+
+      function wireUpFilters() {
+        searchInput.addEventListener('input', (event) => {
+          state.filters.query = event.target.value.trim().toLowerCase();
+          applyFilters();
+        });
+
+        yearSelect.addEventListener('change', (event) => {
+          state.filters.year = event.target.value;
+          applyFilters();
         });
       }
 
-      function render() {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        const selectedYear = yearSelect.value;
+      function applyFilters() {
+        if (!state.entries.length) {
+          return;
+        }
 
-        const filtered = entries.filter((entry) => {
-          const matchesSearch = !searchTerm || entry.searchIndex.includes(searchTerm);
-          const matchesYear = selectedYear === 'all' || entry.yearValue === parseInt(selectedYear, 10);
-          return matchesSearch && matchesYear;
+        const filteredEntries = state.entries.filter((entry) => {
+          const matchesQuery = !state.filters.query || entry.searchIndex.includes(state.filters.query);
+          const matchesYear =
+            state.filters.year === 'all' || entry.yearValue === parseInt(state.filters.year, 10);
+          return matchesQuery && matchesYear;
         });
 
-        updateResults(filtered);
-        updateMeta(filtered.length, entries.length);
+        renderResults(filteredEntries);
+        updateMeta(filteredEntries.length, state.entries.length);
       }
 
-      function updateResults(items) {
-        const resultsContainer = document.getElementById('results');
+      function renderResults(items) {
         resultsContainer.innerHTML = '';
+
         if (!items.length) {
           resultsContainer.innerHTML = '<div class="empty-state">No entries match the current filters.</div>';
           return;
         }
+
         const template = document.getElementById('entry-template');
+        const fragment = document.createDocumentFragment();
+
         items.forEach((item) => {
           const clone = template.content.cloneNode(true);
           const titleEl = clone.querySelector('.entry-title');
@@ -501,7 +565,7 @@
             titleEl.textContent = item.title;
           }
 
-          metaEl.innerHTML = `Published ${item.year} · Last reviewed ${item.last_reviewed}`;
+          metaEl.textContent = `Published ${item.year} · Last reviewed ${item.last_reviewed}`;
           summaryEl.textContent = item.summary;
 
           item.tags.forEach((tag) => {
@@ -521,13 +585,25 @@
             sourcesEl.append(a);
           });
 
-          resultsContainer.append(clone);
+          fragment.append(clone);
         });
+
+        resultsContainer.append(fragment);
+      }
+
+      function renderError(message) {
+        const errorEl = document.createElement('div');
+        errorEl.className = 'empty-state';
+        errorEl.textContent = message;
+        resultsContainer.innerHTML = '';
+        resultsContainer.append(errorEl);
+        updateMeta(0, 0);
       }
 
       function updateMeta(filteredCount, totalCount) {
-        const countEl = document.getElementById('result-count');
-        countEl.textContent = `${filteredCount} of ${totalCount} entries`;
+        const formattedFiltered = Number(filteredCount).toLocaleString();
+        const formattedTotal = Number(totalCount).toLocaleString();
+        countEl.textContent = `${formattedFiltered} of ${formattedTotal} entries`;
       }
     });
   </script>
