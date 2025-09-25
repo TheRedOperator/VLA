@@ -897,5 +897,825 @@
       "Vulnerability Analysis"
     ],
     "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 31,
+    "title": "Invisible Perturbations: Physical Adversarial Examples Exploiting the Rolling Shutter Effect",
+    "year": "26 Nov 2020",
+    "summary": "Demonstrates that modulated light sources can exploit rolling shutter readout to imprint invisible stripe patterns on captured images, enabling remote, human-imperceptible misclassification of ImageNet targets by commodity camera pipelines.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2011.13375"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2011.13375"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Rolling Shutter",
+      "Optical Attack",
+      "Invisible Perturbation"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 32,
+    "title": "Rolling Colors: Adversarial Laser Exploits against Traffic Light Recognition",
+    "year": "10 Aug 2022",
+    "summary": "Analyzes how pulsed, multi-color laser projections can spoof traffic light recognition systems in autonomous vehicles by overloading camera sensors, and studies countermeasures spanning sensing hardware, perception, and control layers.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "USENIX Security 2022 presentation",
+        "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/yan"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "https://www.usenix.org/system/files/sec22-yan.pdf"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Laser Attack",
+      "Traffic Infrastructure",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 33,
+    "title": "Security Analysis of Camera-LiDAR Fusion Against Black-Box Attacks on Autonomous Vehicles",
+    "year": "10 Aug 2022",
+    "summary": "Evaluates the resilience of camera-LiDAR fusion stacks against black-box adversaries, presenting real-world spoofing attacks and hardening guidance for perception fusion used by autonomous cars.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "USENIX Security 2022 presentation",
+        "url": "https://www.usenix.org/conference/usenixsecurity22/presentation/hallyburton"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "https://www.usenix.org/system/files/sec22-hallyburton.pdf"
+      }
+    ],
+    "tags": [
+      "Sensor Fusion",
+      "Autonomous Driving",
+      "LiDAR Spoofing",
+      "Physical Adversarial"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 34,
+    "title": "On the Realism of LiDAR Spoofing Attacks against Autonomous Driving Vehicle at High Speed and Long Distance",
+    "year": "24 Feb 2025",
+    "summary": "Shows experimentally that frequency-modulated LiDAR spoofing can introduce phantom obstacles against vehicles traveling at highway speeds and ranges, and analyzes mitigation strategies for automotive perception stacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "NDSS 2025 paper",
+        "url": "https://www.ndss-symposium.org/ndss-paper/on-the-realism-of-lidar-spoofing-attacks-against-autonomous-driving-vehicle-at-high-speed-and-long-distance/"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "https://www.ndss-symposium.org/wp-content/uploads/2025-628-paper.pdf"
+      }
+    ],
+    "tags": [
+      "LiDAR Spoofing",
+      "Autonomous Driving",
+      "Physical Adversarial",
+      "Sensor Security"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 35,
+    "title": "Imperceptible CMOS camera dazzle for adversarial attacks on deep neural networks",
+    "year": "22 Oct 2023",
+    "summary": "Introduces an optical dazzle attack that blinds CMOS rolling-shutter cameras under photopic conditions invisible to humans, causing downstream vision models to fail while keeping the light source covert.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2311.16118"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2311.16118"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Optical Attack",
+      "Camera Sensor Spoofing",
+      "Stealth"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 36,
+    "title": "Shadows can be Dangerous: Stealthy and Effective Physical-world Adversarial Attack by Natural Phenomenon",
+    "year": "08 Mar 2022",
+    "summary": "Crafts shadow-based perturbations that harness natural illumination to mislead traffic sign recognizers under black-box assumptions, demonstrating high success in simulation and real driving scenarios.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2203.03818"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2203.03818"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Shadow Attack",
+      "Traffic Sign Spoofing",
+      "Black-Box"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 37,
+    "title": "Adversarial Light Projection Attacks on Face Recognition Systems: A Feasibility Study",
+    "year": "14 Jun 2020",
+    "summary": "Validates projector-based adversarial patterns that reliably misidentify subjects in face recognition systems across physical environments, quantifying success rates under varied lighting and motion.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "CVPR 2020 Workshop paper",
+        "url": "https://openaccess.thecvf.com/content_CVPRW_2020/papers/w48/Nguyen_Adversarial_Light_Projection_Attacks_on_Face_Recognition_Systems_A_Feasibility_CVPRW_2020_paper.pdf"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Projector Attack",
+      "Face Recognition",
+      "Optical Attack"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 38,
+    "title": "ProjAttacker: A Configurable Physical Adversarial Attack for Face Recognition via Projector",
+    "year": "19 Jun 2025",
+    "summary": "Introduces a configurable framework for generating projector-based adversarial patterns that adapt to diverse camera poses and face models, improving stealth and transferability of physical face attacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "CVPR 2025 paper",
+        "url": "https://openaccess.thecvf.com/content/CVPR2025/papers/Liu_ProjAttacker_A_Configurable_Physical_Adversarial_Attack_for_Face_Recognition_via_CVPR_2025_paper.pdf"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Projector Attack",
+      "Face Recognition",
+      "Configurable"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 39,
+    "title": "Adversarial Attacks on Event-Based Pedestrian Detectors: A Physical Approach",
+    "year": "01 Mar 2025",
+    "summary": "Designs clothing-borne textures that transfer from simulation to real-world evaluations, degrading event-camera pedestrian detectors and revealing vulnerabilities in neuromorphic perception stacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2503.00377"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2503.00377"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Event Cameras",
+      "Pedestrian Detection",
+      "Adversarial Clothing"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 40,
+    "title": "Empirical Analysis of Large Vision-Language Models against Goal Hijacking via Visual Prompt Injection",
+    "year": "07 Aug 2024",
+    "summary": "Evaluates goal-hijacking visual prompt injections against LVLMs such as GPT-4V, introducing attack benchmarks and showing double-digit success rates that depend on character recognition and instruction following.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2408.03554"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2408.03554"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Prompt Injection",
+      "Security Evaluation",
+      "Goal Hijacking"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 41,
+    "title": "Safeguarding Vision-Language Models Against Patched Visual Prompt Injectors",
+    "year": "17 May 2024",
+    "summary": "Proposes SmoothVLM, a smoothing-based defense that counters adversarial patch prompt injections on VLMs, reducing attack success while preserving task fidelity across benchmark datasets.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2405.10529"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2405.10529"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Prompt Injection",
+      "Defense",
+      "Adversarial Patch"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 42,
+    "title": "Prompt injection attacks on vision language models in oncology",
+    "year": "01 Feb 2025",
+    "summary": "Documents how imperceptible prompt injections embedded in medical imagery can coerce clinical VLMs into harmful recommendations, quantifying vulnerabilities across multiple proprietary models in oncology workflows.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "Nature Communications article",
+        "url": "https://www.nature.com/articles/s41467-024-55631-x"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Healthcare AI",
+      "Prompt Injection",
+      "Risk Assessment"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 43,
+    "title": "TrojVLM: Backdoor Attack Against Vision Language Models",
+    "year": "28 Sep 2024",
+    "summary": "Introduces TrojVLM, a backdoor that injects attacker-controlled text into VLM outputs while preserving semantic fidelity, demonstrating risks for image captioning and VQA pipelines.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2409.19232"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2409.19232"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Backdoor Attack",
+      "Image Captioning",
+      "Adversarial NLP"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 44,
+    "title": "BadCLIP: Trigger-Aware Prompt Learning for Backdoor Attacks on CLIP",
+    "year": "26 Nov 2023",
+    "summary": "Develops BadCLIP, a trigger-aware prompt tuning method that implants persistent backdoors into CLIP without extensive data, achieving high attack success while retaining clean accuracy across datasets.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2311.16194"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2311.16194"
+      }
+    ],
+    "tags": [
+      "CLIP",
+      "Backdoor Attack",
+      "Prompt Learning",
+      "Vision-Language Models"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 45,
+    "title": "Shadowcast: Stealthy Data Poisoning Attacks Against Vision-Language Models",
+    "year": "05 Feb 2024",
+    "summary": "Presents Shadowcast, a data poisoning pipeline that hides malicious perturbations in VLM training pairs to drive both label flipping and persuasive misinformation behaviors with minimal poison budget.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2402.06659"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2402.06659"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Data Poisoning",
+      "Stealth Attack",
+      "Misinformation"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 46,
+    "title": "Robust Contrastive Language-Image Pre-training against Data Poisoning and Backdoor Attacks",
+    "year": "13 Mar 2023",
+    "summary": "Introduces ROCLIP, a robust CLIP training strategy that breaks poisoned image-caption associations via caption pools and augmentations, cutting targeted attack success while retaining downstream accuracy.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2303.06854"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2303.06854"
+      }
+    ],
+    "tags": [
+      "CLIP",
+      "Defense",
+      "Data Poisoning",
+      "Vision-Language Models"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 47,
+    "title": "Jailbreaking LLM-Controlled Robots",
+    "year": "17 Oct 2024",
+    "summary": "Introduces RoboPAIR, an automated jailbreak generator that coaxes LLM-driven robots into harmful actions across white-, gray-, and black-box setups, evidencing real-world safety risks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2410.13691"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2410.13691"
+      },
+      {
+        "type": "website",
+        "title": "Project site",
+        "url": "https://robopair.org"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "LLM Jailbreak",
+      "Autonomous Systems",
+      "Safety"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 48,
+    "title": "Jailbreaking Black Box Large Language Models in Twenty Queries",
+    "year": "12 Oct 2023",
+    "summary": "Introduces Prompt Automatic Iterative Refinement (PAIR), a black-box jailbreak algorithm that efficiently crafts adversarial prompts for closed-source LLMs with fewer than twenty interactions.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2310.08419"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2310.08419"
+      }
+    ],
+    "tags": [
+      "LLM Security",
+      "Jailbreak Attack",
+      "Prompt Engineering",
+      "Black-Box"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 49,
+    "title": "TrojanRobot: Physical-world Backdoor Attacks Against VLM-based Robotic Manipulation",
+    "year": "18 Nov 2024",
+    "summary": "Backdoors modular robotic policies by inserting poisoned VLM perception modules, demonstrating high-success physical attacks across UR3e manipulator tasks with stealthy trigger designs.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2411.11683"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.11683"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Backdoor Attack",
+      "Vision-Language Models",
+      "Physical Adversarial"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 50,
+    "title": "Attacking Vision-Language Computer Agents via Pop-ups",
+    "year": "04 Nov 2024",
+    "summary": "Demonstrates that adversarial pop-up windows can reliably derail VLM-driven computer agents, cutting benchmark success rates nearly in half despite simple instruction-level defenses.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2411.02391"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.02391"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Agent Security",
+      "Prompt Injection",
+      "Human-Computer Interaction"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 51,
+    "title": "The Translucent Patch: A Physical and Universal Attack on Object Detectors",
+    "year": "23 Dec 2020",
+    "summary": "Designs camera-mounted translucent patches that universally hide chosen object classes from state-of-the-art detectors while leaving other detections largely intact in autonomous driving benchmarks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2012.12528"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2012.12528"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Object Detection",
+      "Universal Attack",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 52,
+    "title": "Physical Backdoor: Towards Temperature-based Backdoor Attacks in the Physical World",
+    "year": "30 Apr 2024",
+    "summary": "Introduces thermal infrared triggers that plant backdoors in TIOD models, detailing temperature and material considerations for high-success attacks in both digital and field tests.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2404.19417"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2404.19417"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Backdoor Attack",
+      "Thermal Imaging",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 53,
+    "title": "Adversarial Robustness for Visual Grounding of Multimodal Large Language Models",
+    "year": "16 May 2024",
+    "summary": "Analyzes adversarial attacks on multimodal LLM visual grounding, proposing untargeted and targeted perturbations that misalign bounding boxes and benchmarking robustness across state-of-the-art models.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2405.09981"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2405.09981"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Adversarial Attack",
+      "Visual Grounding",
+      "Robustness"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 54,
+    "title": "GPT-4 Vision Prompt Injection: Risks, Examples & Defense",
+    "year": "16 Oct 2023",
+    "summary": "Survey article outlining how GPT-4V prompt injections manifest in practice, cataloging example exploits, and recommending operational mitigations for computer vision deployments.",
+    "sources": [
+      {
+        "type": "article",
+        "title": "Roboflow blog post",
+        "url": "https://blog.roboflow.com/gpt-4-vision-prompt-injection/"
+      }
+    ],
+    "tags": [
+      "Vision-Language Models",
+      "Prompt Injection",
+      "Security Awareness",
+      "Best Practices"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 55,
+    "title": "CAPAA: Classifier-Agnostic Projector-Based Adversarial Attack",
+    "year": "01 Jun 2025",
+    "summary": "Presents CAPAA, an optimization framework that aggregates gradients from multiple classifiers to craft projector-based adversarial light patterns resilient to pose changes and model swaps.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2506.00978"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.00978"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/ZhanLiQxQ/CAPAA"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Projector Attack",
+      "Classifier Agnostic",
+      "Robustness"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 56,
+    "title": "Exploring the Adversarial Vulnerabilities of Vision-Language-Action Models in Robotics",
+    "year": "18 Nov 2024",
+    "summary": "Benchmarks untargeted and targeted attacks plus adversarial patches against VLA robots, revealing drastic drops in task success and highlighting spatially-informed threat objectives.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2411.13587"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2411.13587"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Vision-Language Models",
+      "Adversarial Attack",
+      "VLA"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 57,
+    "title": "RFLA: A Stealthy Reflected Light Adversarial Attack in the Physical World",
+    "year": "14 Jul 2023",
+    "summary": "Uses reflected colored light patterns to craft stealthy adversarial perturbations effective under daylight, validated across datasets and physical setups without conspicuous markers.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2307.07653"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2307.07653"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Optical Attack",
+      "Stealth",
+      "Reflected Light"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 58,
+    "title": "Invisible Optical Adversarial Stripes on Traffic Sign against Autonomous Vehicles",
+    "year": "10 Jul 2024",
+    "summary": "Builds GhostStripe, a timing-controlled LED attack that creates invisible rolling-shutter stripes on traffic signs, achieving sustained misclassification of autonomous vehicle perception.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2407.07510"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2407.07510"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Rolling Shutter",
+      "Traffic Sign Spoofing",
+      "Autonomous Driving"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 59,
+    "title": "Adversarial Laser Spot: Robust and Covert Physical-World Attack to DNNs",
+    "year": "02 Jun 2022",
+    "summary": "Optimizes low-cost laser spot parameters via genetic algorithms to conduct daytime-visible yet covert attacks that transfer across deep vision models.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2206.01034"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2206.01034"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/ChengYinHu/AdvLS"
+      }
+    ],
+    "tags": [
+      "Physical Adversarial",
+      "Laser Attack",
+      "Robustness",
+      "Transferability"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 60,
+    "title": "State-of-the-art optical-based physical adversarial attacks for deep learning computer vision systems",
+    "year": "22 Mar 2023",
+    "summary": "Surveys invasive and non-invasive optical physical attacks, categorizing techniques such as lasers, projectors, and reflective perturbations against deep vision models.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2303.12249"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2303.12249"
+      }
+    ],
+    "tags": [
+      "Survey",
+      "Physical Adversarial",
+      "Optical Attack",
+      "Computer Vision"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 61,
+    "title": "Phantom of the ADAS: Securing Advanced Driver-Assistance Systems from Split-Second Phantom Attacks",
+    "year": "09 Nov 2020",
+    "summary": "Analyzes projection-based phantom imagery that tricks ADAS perception within milliseconds, and proposes hardware-software defenses tailored to production autonomous driving stacks.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "ACM CCS 2020",
+        "url": "https://dl.acm.org/doi/10.1145/3372297.3423359"
+      }
+    ],
+    "tags": [
+      "Autonomous Driving",
+      "Sensor Spoofing",
+      "Security Assessment",
+      "Physical Adversarial"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 62,
+    "title": "On the Vulnerability of LLM/VLM-Controlled Robotics",
+    "year": "15 Feb 2024",
+    "summary": "Characterizes how small instruction and perception perturbations degrade LLM/VLM robot controllers, offering perturbation strategies that expose 14–22% drops in task success.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2402.10340"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2402.10340"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "LLM Vulnerability",
+      "Vision-Language Models",
+      "Robustness"
+    ],
+    "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 63,
+    "title": "Adversarial Attacks on Robotic Vision Language Action Models",
+    "year": "03 Jun 2025",
+    "summary": "Adapts LLM jailbreaking techniques to vision-language-action controllers, demonstrating that brief textual prompts can seize control authority over real robot platforms.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2506.03350"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2506.03350"
+      },
+      {
+        "type": "code",
+        "title": "Source code",
+        "url": "https://github.com/eliotjones1/robogcg"
+      }
+    ],
+    "tags": [
+      "Robotics Security",
+      "Vision-Language Models",
+      "Adversarial Attack",
+      "LLM Jailbreak"
+    ],
+    "last_reviewed": "24 Sep 2025"
   }
 ]
