@@ -1717,5 +1717,30 @@
       "LLM Jailbreak"
     ],
     "last_reviewed": "24 Sep 2025"
+  },
+  {
+    "id": 64,
+    "title": "Latent Diffusion Models are Powerful Visual Anomaly Detectors",
+    "year": "22 Jul 2022",
+    "summary": "Demonstrates that latent diffusion models pretrained on generic imagery provide rich feature spaces for anomaly detection, achieving state-of-the-art accuracy on MVTec AD and VisA benchmarks without task-specific supervision.",
+    "sources": [
+      {
+        "type": "paper",
+        "title": "arXiv",
+        "url": "https://arxiv.org/abs/2207.11569"
+      },
+      {
+        "type": "pdf",
+        "title": "PDF",
+        "url": "http://arxiv.org/pdf/2207.11569"
+      }
+    ],
+    "tags": [
+      "Anomaly Detection",
+      "Latent Diffusion",
+      "Industrial Inspection",
+      "Computer Vision"
+    ],
+    "last_reviewed": "24 Sep 2025"
   }
 ]
